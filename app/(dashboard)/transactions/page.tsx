@@ -5,8 +5,7 @@ export const dynamic = "force-dynamic";
 import { db } from "@/lib/db";
 import { transactions } from "@/lib/db/schema";
 import { desc } from "drizzle-orm";
-import { Badge } from "@/components/ui/badge";
-
+import { Badge } from "@/app/components/ui/badge";
 export default async function TransactionsPage() {
   const data = await db
     .select()
