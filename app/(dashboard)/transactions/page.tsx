@@ -20,8 +20,8 @@ export default async function TransactionsPage() {
         {data.map((t) => (
           <div key={t.id} className="p-3 border rounded">
             <div className="flex justify-between">
-              <span>{t.title}</span>
-              <Badge>{t.category}</Badge>
+              <span>{t.description}</span>
+              <Badge>{t.type}</Badge>
             </div>
             <div className="text-sm text-gray-500">
               {t.date?.toString()}
