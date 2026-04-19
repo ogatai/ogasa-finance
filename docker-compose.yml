@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:16-alpine          # PostgreSQL 16 の軽量版イメージ
+    environment:
+      POSTGRES_USER: ogasa             # DBユーザー名
+      POSTGRES_PASSWORD: password      # DBパスワード（開発用）
+      POSTGRES_DB: ogasa_finance       # データベース名
+    ports:
+      - "5432:5432"                    # ローカル5432番 → コンテナ5432番
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # データを永続化
+    restart: unless-stopped
+ 
+volumes:
+  postgres_data:                       # Dockerが管理する永続ストレージ
