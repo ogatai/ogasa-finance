@@ -1,10 +1,13 @@
 // ファイル: app\(dashboard)\transactions\page.tsx
 // ★ React Server Component — サーバー側でDBから直接データを取得
- 
+
 import { db } from "@/lib/db";
-import { transactions, accounts, categories } from "@/lib/db/schema";
+import { transactions } from "@/lib/db/schema";
 import { desc } from "drizzle-orm";
 import { Badge } from "@/app/components/ui/badge";
+
+// ビルド時に DB へ接続しない（Vercel 等で DATABASE_URL がビルド段階に無い場合の対策）
+export const dynamic = "force-dynamic";
 
 // 取引タイプに対応するバッジカラー
 const typeColors = {
