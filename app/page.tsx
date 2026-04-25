@@ -6,7 +6,14 @@ export default function Home() {
           ogasa-finance へようこそ
         </h1>
         <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
-          左のナビゲーションからダッシュボードや取引一覧へ移動できます。
+          まずは
+          <a
+            href="/transactions"
+            className="mx-1 font-medium text-zinc-900 underline underline-offset-4 dark:text-zinc-100"
+          >
+            取引一覧
+          </a>
+          から確認してください。
         </p>
       </main>
     </div>
