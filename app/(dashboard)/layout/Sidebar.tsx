@@ -1,4 +1,4 @@
-// ファイル: components\layout\Sidebar.tsx
+// ファイル: app/(dashboard)/layout/Sidebar.tsx
 "use client";
  
 import Link from "next/link";
@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
  
 const navItems = [
-  { href: "/",            label: "ダッシュボード", emoji: "🏠" },
+  { href: "/",            label: "ダッシュボード", emoji: "🏡" },
   { href: "/transactions",label: "取引一覧",       emoji: "📊" },
   { href: "/accounts",    label: "口座管理",       emoji: "🏦" },
   { href: "/import",      label: "CSVインポート",  emoji: "📥" },
